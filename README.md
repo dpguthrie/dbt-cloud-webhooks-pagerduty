@@ -1,4 +1,4 @@
-# dbt Cloud Webhooks - Datadog
+# dbt Cloud Webhooks - PagerDuty
 
 ## Overview
 
