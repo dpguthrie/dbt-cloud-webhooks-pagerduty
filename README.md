@@ -51,6 +51,7 @@ flyctl launch
 
 The following secrets need to be configured to your runtime environment for your application to work properly.
 
+- `DBT_CLOUD_AUTH_TOKEN` - his is the secret key that's shown after initailly creating your webhook subscription in dbt Cloud
 - `DBT_CLOUD_SERVICE_TOKEN` - Generate a [service token](https://docs.getdbt.com/docs/dbt-cloud-apis/service-tokens#generating-service-account-tokens) in dbt Cloud.  Ensure that it has at least the `Metadata Only` permission as we will be making requests against the Metadata API.
 - `PD_ROUTING_KEY` - Use the integration key for your integration (will be used as `routing_key`).  More info [here](https://developer.pagerduty.com/docs/ZG9jOjExMDI5NTgw-events-api-v2-overview#getting-started)
 
@@ -63,7 +64,7 @@ flyctl secrets set DBT_CLOUD_SERVICE_TOKEN=***
 Or set them all at once:
 
 ```bash
-flyctl secrets set DBT_CLOUD_SERVICE_TOKEN=*** PD_ROUTING_KEY=***
+flyctl secrets set DBT_CLOUD_AUTH_TOKEN=*** DBT_CLOUD_SERVICE_TOKEN=*** PD_ROUTING_KEY=***
 ```
 
 ### Other Helpful Commands
